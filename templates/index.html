@@ -8,6 +8,9 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
             <h1>Alexis's Blog</h1>
+            {% if current_user.is_authenticated: %}
+            <h2>Greetings, {{current_user.name}}</h2>
+            {% endif %}
             <span class="subheading">A collection of random musings.</span>
           </div>
         </div>
